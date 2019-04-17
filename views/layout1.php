@@ -4,9 +4,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Travel Blog</title>
-	<link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css">
-        <link href="css/style.css" rel="stylesheet" type="text/css"/>
-	<link rel="stylesheet" href="css/fixed.css">        
+	<link rel="stylesheet" href="views/bootstrap-4.1.3-dist/css/bootstrap.min.css">
+        <link href="views/css/style.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" href="views/css/fixed.css">        
 </head>
 
 <body data-spy="scroll" data-target="#navbarResponsive">
@@ -24,10 +24,10 @@
  <div class="collapse navbar-collapse" id="navbarResponsive">
      <ul class="navbar-nav ml-auto">
          <li class="nav-item">
-             <a class="nav-link" href="#Home">Home</a>
+             <a class="nav-link" href="index.php">Home</a>
              </li>
              <li class="nav-item">
-             <a class="nav-link" href="#destination">Destination</a>
+                  <a class="nav-link"  href="?controller=post&action=readAll" >Destination</a>
              </li>
              <li class="nav-item">
              <a class="nav-link" href="#ecoTravel">Eco Travel</a>
@@ -58,11 +58,14 @@
  <div class="caption text-center">
      <h1>Welcome to our Travel Blog</h1>
      <h3>Start your journey today</h3>
-     <a class="btn btn-outline-light btn-lg" href="#">
-         Sign up/ get started
+
+     <a href='?controller=post&action=readAll'>list all posts</a>
+       
      </a>
+      <?php require_once('routes.php'); ?>
+    
  </div>
- 
+
  <!-- end landing page -->
 
 </div>
@@ -285,6 +288,7 @@
     
     <hr class="socket">
     &copy; Blog theme
+     
 </div>
 </footer>
 </div>
