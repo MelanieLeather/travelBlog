@@ -9,10 +9,12 @@
         <h1>list of all posts</h1>
   
   
-   <?php foreach ($posts as $posts) { ?>
-                        <p>  <td>   <?php echo $posts->title; ?> </td>
+   <?php foreach ($posts as $post) { ?>
+                        <p>  <td>   <?php echo $post->title; ?> </td>
                             </p>
-
                         <?php } ?>
+                            
+                          
+               
     </body>
 </html>

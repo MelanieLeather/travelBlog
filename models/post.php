@@ -2,13 +2,23 @@
 class Post {
     public $id;
     public $user_id;
-    public $title;
+  
     public $body;
     public $published;
     public $created_at;
     public $updated_at;
     public $category_id;
     public $first_name;
+    
+    
+     
+    public $title;
+    public $price;
+
+    public function __construct($title) {
+      $this->title    = $title;
+      
+    }
     
 //    public function _construct($id, $user_id, $title, $body, $published, $created_at, $updated_at, $category_id){
 //        $this->id=$id;
@@ -21,10 +31,10 @@ class Post {
 //        $this->category_id=$category_id;
 //    }
 //    
-    public function _construct ($title) {
-        $this->title=$title;
-        
-    }
+//    public function _construct ($title) {
+//        $this->title=$title;
+//        
+//    }
 //    public static function all() {
 //       $list = [];
 //      $db = Db::getInstance();
@@ -43,10 +53,14 @@ class Post {
       $db = Db::getInstance();
       $req = $db->query('SELECT title FROM post');
       // we create a list of Product objects from the database results
-      foreach($req->fetchAll() as $post) {
-        $list[] = new Post($post['title']);
-      }
+
+       foreach($req->fetchAll() as $post) {
+          $list[] = new Post($post['title']); 
+
+         
+       }
       return $list;
+   
     }
-    }
+}
     
