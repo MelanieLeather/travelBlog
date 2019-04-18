@@ -27,7 +27,10 @@
              <a class="nav-link" href="index.php">Home</a>
              </li>
              <li class="nav-item">
-                  <a class="nav-link"  href="?controller=post&action=readAll" >Destination</a>
+                 <a class="nav-link"  href="?controller=post&action=readAll" >View all articles</a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link"  href="#destination" >Destination</a>
              </li>
              <li class="nav-item">
              <a class="nav-link" href="#ecoTravel">Eco Travel</a>
@@ -56,13 +59,9 @@
  </div>
  
  <div class="caption text-center">
-     <h1>Welcome to our Travel Blog</h1>
-     <h3>Start your journey today</h3>
-
-     <a href='?controller=post&action=readAll'>list all posts</a>
-       
-     </a>
+    
       <?php require_once('routes.php'); ?>
+      
     
  </div>
 

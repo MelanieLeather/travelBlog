@@ -12,7 +12,6 @@ class ProductController {
       // without an id we just redirect to the error page as we need the post id to find it in the database
       if (!isset($_GET['id']))
         return call('pages', 'error');
-
       try{
       // we use the given id to get the correct post
       $product = Product::find($_GET['id']);
@@ -62,7 +61,7 @@ class ProductController {
             Product::remove($_GET['id']);
             
             $products = Product::all();
-            require_once('views/products/readAll.php');
+                require_once('views/products/readAll.php');
       }
       
     }
